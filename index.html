@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PD Companion — Parkinson's Support Assistant</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🤝</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #f5f4f0; font-family: 'Nunito', sans-serif; }
+      .serif { font-family: 'Lora', Georgia, serif; }
+      input[type=range] { -webkit-appearance: none; height: 6px; border-radius: 99px; background: #e5e7eb; outline: none; }
+      input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 22px; height: 22px; border-radius: 50%; cursor: pointer; }
+      input[type=range].teal::-webkit-slider-thumb  { background: #0d9488; }
+      input[type=range].amber::-webkit-slider-thumb { background: #f59e0b; }
+      input[type=range].blue::-webkit-slider-thumb  { background: #3b82f6; }
+      @keyframes pdBounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+      @keyframes fadeIn   { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+      .fade-in { animation: fadeIn 0.25s ease forwards; }
+      textarea:focus, input:focus, select:focus { outline: none; box-shadow: 0 0 0 2px #5eead4; }
+      ::-webkit-scrollbar { width: 4px; }
+      ::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 99px; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
